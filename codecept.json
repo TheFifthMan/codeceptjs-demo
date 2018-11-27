@@ -1,0 +1,34 @@
+{
+  "multiple":{
+    "basic":{
+      "browsers":["chrome","firefox"]
+    },
+    "parallel": {
+      "chunks":2
+    }
+  },
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "https://www.cm.ehealthinsurance.com",
+      "browser": "chrome"
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "loginPage": "./pages/login.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./case/*.js",
+  "timeout": 10000,
+  "name": "codecept-demo"
+}
